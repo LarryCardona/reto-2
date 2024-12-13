@@ -21,7 +21,7 @@ import { VideoEmbedComponent } from './components/video-embed/video-embed.compon
 
 import { HomeComponent } from './pages/home/home.component'
 import { ShowDetailComponent } from './pages/show-detail/show-detail.component'
-import { ShowListComponent } from './pages/show-list/show-list.component'
+import { ShowsListComponent } from './pages/shows-list/shows-list.component'
 
 import { MoviesService } from './services/movies.service'
 import { TvshowsService } from './services/tvshows.service'
@@ -40,7 +40,7 @@ import { GenresComponent } from './pages/genres/genres.component'
     BannerComponent,
     ShowItemComponent,
     ShowDetailComponent,
-    ShowListComponent,
+    ShowsListComponent,
     VideoEmbedComponent,
     GenresComponent,
   ],

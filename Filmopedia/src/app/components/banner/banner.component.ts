@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core'
+import { Movie } from '../../types/movie'
 
 @Component({
   selector: 'app-banner',
-  standalone: true,
-  imports: [],
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.css'
+  styleUrl: './banner.component.scss',
 })
 export class BannerComponent {
-
+  @Input() shows: Movie[] = []
+  @Input() title = ''
+  @Input() showType: 'tv' | 'movie' = 'movie'
 }

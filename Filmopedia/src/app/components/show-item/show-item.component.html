@@ -1,1 +1,22 @@
-<p>show-item works!</p>
+<a
+  class="show-item"
+  *ngIf="showItem"
+  [routerLink]="'/detail/' + showType + '/' + showItem.id"
+>
+  <div class="show-item-rating">
+    <i class="pi pi-star"></i>
+    <span>{{ showItem.vote_average.toFixed(2) }}/10</span>
+  </div>
+  <div class="show-item-image">
+    <img
+      *ngIf="showItem.poster_path; else defaultMoviePhoto"
+      [src]="imagesBaseUrl + '/w500/' + showItem.poster_path"
+      [alt]="showItem.title"
+    />
+  </div>
+  <div class="show-item-title">{{ showItem.original_title }}</div>
+</a>
+
+<ng-template #defaultMoviePhoto>
+  <img src="assets/images/movie.png" alt="No Picture" />
+</ng-template>
