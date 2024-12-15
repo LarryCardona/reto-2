@@ -1,17 +1,18 @@
 <div class="container">
-  <div class="grid">
-    <div class="col-12 genres-link">
-      <ng-container *ngIf="genres$ | async as genres">
+  <div class="genres-container">
+    <ng-container *ngIf="genres$ | async as genres">
+      <div class="genres">
         <a
           *ngFor="let genre of genres"
           [routerLink]="'/genres/' + genre.id"
           role="button"
           aria-hidden="true"
+          class="genre-item"
         >
           {{ genre.name }}
         </a>
-      </ng-container>
-    </div>
+      </div>
+    </ng-container>
   </div>
 
   <ng-container *ngIf="shows$ | async as shows">

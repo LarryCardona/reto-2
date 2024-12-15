@@ -28,7 +28,8 @@ import { TvshowsService } from './services/tvshows.service'
 
 import { FooterComponent } from './shared/footer/footer.component'
 import { HeaderComponent } from './shared/header/header.component';
-import { GenresComponent } from './pages/genres/genres.component'
+import { GenresComponent } from './pages/genres/genres.component';
+import { ModalMenuComponent } from './shared/modal-menu/modal-menu.component'
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { GenresComponent } from './pages/genres/genres.component'
     ShowsListComponent,
     VideoEmbedComponent,
     GenresComponent,
+    ModalMenuComponent,
   ],
   imports: [
     BrowserModule,

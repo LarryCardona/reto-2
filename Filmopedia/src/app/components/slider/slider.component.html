@@ -24,7 +24,19 @@
             {{ movie.release_date | date: 'yyyy' }}
           </div>
         </div>
-        <div class="description">{{ movie.overview }}</div>
+        <!-- Mostrar solo parte de la descripción en la página de inicio -->
+        <div class="description">
+          <span *ngIf="isHomePage">
+            {{ movie.overview | slice:0:150 }}...
+          </span>
+          <span *ngIf="!isHomePage">
+            {{ movie.overview }}
+          </span>
+        </div>
+
+        <button *ngIf="isHomePage" class="details-button" [routerLink]="['/detail', 'movie', movie.id]">
+          Ver detalles
+        </button>
       </div>
     </div>
   </ng-container>

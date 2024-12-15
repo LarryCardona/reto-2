@@ -4,9 +4,8 @@
     <span>FilmoPedia</span>
   </div>
 
-  <!-- Menú para pantallas grandes y pequeñas -->
+  <!-- Menú para pantallas grandes -->
   <nav class="navbar navbar-expand-lg">
-    <!-- Opciones del menú para pantallas grandes -->
     <ul class="navbar-nav d-none d-lg-flex">
       <li class="nav-item">
         <a class="nav-link active" routerLink="/">Home</a>
@@ -23,7 +22,12 @@
     </ul>
 
     <!-- Botón hamburguesa para pantallas pequeñas -->
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="modal" data-bs-target="#menuModal">
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="modal"
+      data-bs-target="#menuModal"
+    >
       <div class="hamburger-lines">
         <span class="line"></span>
         <span class="line"></span>
@@ -33,36 +37,4 @@
   </nav>
 </header>
 
-<!-- Modal para el menú en pantallas pequeñas -->
-<div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content">
-      <div class="modal-header bg-black">
-        <!-- Logo en el modal -->
-        <div class="logo-modal d-flex align-items-center">
-          <img src="../../../assets/images/logo.jpg" alt="logo" class="modal-logo-img" />
-          <span class="modal-logo-text">FilmoPedia</span>
-        </div>
-      </div>
-      <div class="modal-body d-flex flex-column justify-content-center align-items-center bg-black">
-        <ul class="navbar-nav text-center">
-          <li class="nav-item">
-            <a class="btn btn-danger w-100 my-2" routerLink="/" data-bs-dismiss="modal">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-danger w-100 my-2" routerLink="list/movie" data-bs-dismiss="modal">Movies</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-danger w-100 my-2" routerLink="list/tv" data-bs-dismiss="modal">TvShows</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-danger w-100 my-2" routerLink="genres" data-bs-dismiss="modal">Genres</a>
-          </li>
-        </ul>
-      </div>
-      <div class="modal-footer bg-black">
-        <button type="button" class="btn btn-light w-100" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
+<app-modal-menu></app-modal-menu>
